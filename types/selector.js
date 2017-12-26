@@ -5,7 +5,7 @@ var
 
 var Selector = Backbone.Model.extend({
   defaults: {
-    paging: new Paging.model().toJSON()
+//    paging: new Paging.model().toJSON()
   }
 });
 
