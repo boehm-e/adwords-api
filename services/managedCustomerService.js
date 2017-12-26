@@ -23,7 +23,7 @@ function Service(options) {
         {field: 'CustomerId', operator: 'EQUALS', values: customerId}
       ]
     });
-    
+
     return self.get(clientCustomerId, selector, cb);
   };
 
@@ -32,14 +32,14 @@ function Service(options) {
     var operation = {};
     operation[self.operatorKey] = 'SET';
     operation.operand = operand.toJSON();
-    
+
     var options = {
       clientCustomerId: clientCustomerId,
       mutateMethod: 'mutateLink',
       operations: [operation],
       parseMethod: self.parseMutateLinkResponse
     };
-    
+
     self.mutate(options, done);
   };
 
@@ -95,7 +95,7 @@ function Service(options) {
 
   self.selectable = [
     'Name',
-    'CompanyName',
+    // 'CompanyName',
     'CustomerId',
     'CanManageClients',
     'CurrencyCode',
